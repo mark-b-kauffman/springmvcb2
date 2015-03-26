@@ -1,10 +1,10 @@
-Spring ExternalLink B2
+Spring MVC B2
 =====================
 
-This project is based from an example Building Block (B2) for Blackboard Learn using the Spring APIs that Blackboard provides for third party developers. There is also code in the extlink folder and bb-manifest that inserts an ExternalLink on a content page that points to a simple bbNG:learningSystemPage. This code demonstrates our breadcrumb stacking issue.
+This project is based from the Spring Tool Suite (STS) Spring MVC project. We've added a bb-manifest.xml and an example of a view that uses the Blackboard Tags to render a page that has the look and feel of other Blackboard Learn pages.
 
 ### Clone to local repo
-bitbucket: git clone https://markkauffman2000@bitbucket.org/markkauffman2000/spring-extlink-example-b2.git spring-extlink-example-b2
+bitbucket: git clone https://markkauffman2000@bitbucket.org/markkauffman2000/springmvcb2.git SpringMVCB2
 
 ### Building
 To build the project, just run:
