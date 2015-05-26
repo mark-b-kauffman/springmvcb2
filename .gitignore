@@ -4,6 +4,8 @@
 .classpath
 .project
 .DS*
+SpringMVCB2.sublime-workspace 
+SpringMVCB2.sublime-project
 build
 build/
 private
