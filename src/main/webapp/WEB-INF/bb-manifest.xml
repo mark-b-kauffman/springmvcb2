@@ -6,6 +6,7 @@
 
     <name value="Spring MVCB2" />
     <handle value="SpringMVCB2" />
+    <webapp-type value="javaext" />
     <description value="Spring MVCB2" />
     <default-locale value="en_US" />
 
@@ -23,25 +24,50 @@
 
       <!-- Custom content types defined by this extension -->
       <content-handlers>
-      <content-handler>
+
+      <!--content-handler>
          <name value="InsertItemLink"/>
-         <handle value= "resource/x-itemlink"/>
+         <handle value= "resource/springmvcb2-itemlink"/>
          <http-actions>
             <create value="/insertItemLink/create"/>
             <view value="/insertItemLink/view"/>
          </http-actions>
          <icons>
-             <toolbar value="/resources/images/fast-forward.blue.gif"/>
-             <listitem value="/resources/images/fast-forward.blue.gif"/>
+             <toolbar value="images/fast-forward.blue.gif"/>
+             <listitem value="images/fast-forward.blue.gif"/>
          </icons>
           <types>              
-			      <type>
+            <type>
                 <action-type value="mashup"/>
             </type>            		  
           </types>
-		  
-      </content-handler>
+      </content-handler -->
+
+        <content-handler>
+           <name value="InsertExternalLink"/>
+           <handle value= "resource/springmvcb2-extlink"/>
+           <http-actions>
+              <create value="linkjsp/insertExternalLink.jsp"/>
+           </http-actions>
+           <icons>
+               <toolbar value="images/fast-forward.red.gif"/>
+               <listitem value="images/fast-forward.red.gif"/>
+           </icons>
+            <types>
+              <type>
+                  <action-type value="mashup"/>
+              </type>
+            </types>
+        </content-handler>
+
       </content-handlers>
+
+      <extension-defs>
+            <!-- course copy -->
+            <definition namespace="blackboard.platform">
+                <extension id="springmvc-course-copy" point="blackboard.platform.cxComponent" class="com.blackboard.SpringMVCB2.CourseCopyHandler" singleton="true"/>
+            </definition>
+      </extension-defs>
 
     <schema-dirs>
       <schema-dir dir-name="spring" />
